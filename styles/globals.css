@@ -1,26 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply min-h-screen text-gray-900 bg-white dark:text-white dark:bg-gray-800;
+  }
+}
+
+@layer components {
+  .links {
+    background: linear-gradient(to left, #ffffff 50%, #d4d4d4 50%) right;
+    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
+  }
+
+  .links.active {
+    background: #d4d4d4; /* bg-neutral-300 */
+  }
+
+  .dark .links {
+    background: linear-gradient(to left, #1f2937 50%, #404040 50%) right;
+    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
+  }
+
+  .dark .links.active {
+    background: #404040; /* bg-neutral-700 */
   }
 }
