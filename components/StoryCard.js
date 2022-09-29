@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function StoryCard({
   title,
   description,
@@ -6,14 +8,27 @@ export default function StoryCard({
   link,
 }) {
   return (
-    <div className="flex items-center p-4 border border-gray-200 rounded shadow">
-      <article class="">
-        <h1 class="text-xl font-bold mb-1">{title}</h1>
-        <p className="mb-4 text-justify text-gray-500">{description}</p>
-
-        <p className="text-sm italic text-right text-gray-500">
-          <span>{publisher}</span> · <span>{publishDate}</span>
+    <div className="flex items-center p-4 border-b border-r border-gray-200">
+      <article>
+        <h1 className="mb-1 text-xl font-bold">{title}</h1>
+        <p className="mb-4 text-justify text-gray-500 dark:text-gray-300">
+          {description}
         </p>
+
+        <div className="flex justify-between">
+          <Link href={link}>
+            <a
+              target="_blank"
+              className="text-sm text-gray-500 dark:text-gray-300 hover:underline"
+            >
+              Leer
+            </a>
+          </Link>
+
+          <p className="text-sm italic text-gray-500 dark:text-gray-300">
+            <span>{publisher}</span> · <span>{publishDate}</span>
+          </p>
+        </div>
       </article>
     </div>
   );
