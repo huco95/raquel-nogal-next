@@ -27,7 +27,6 @@ export function ThemeContextProvider(props) {
   };
 
   const toggleThemeHandler = () => {
-    console.log("toggleThemeHandler");
     const isDarkTheme = localStorage.theme === "dark";
     localStorage.theme = isDarkTheme ? "light" : "dark";
     document.documentElement.classList.toggle("dark", !isDarkTheme);
