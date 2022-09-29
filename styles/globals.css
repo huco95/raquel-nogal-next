@@ -10,20 +10,15 @@
 
 @layer components {
   .links {
-    background: linear-gradient(to left, #ffffff00 50%, #d4d4d4 50%) right;
-    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
+    @apply inline-block pb-[3px] bg-left-bottom bg-[length:0%_2px] bg-no-repeat hover:bg-right-bottom hover:bg-[length:100%_2px] bg-gradient-to-r from-black to-black;
+    transition: background-size 0.3s, background-position 0s 0.3s;
   }
 
   .links.active {
-    background: #d4d4d4; /* bg-neutral-300 */
+    @apply bg-left-bottom bg-[length:100%_2px];
   }
 
   .dark .links {
-    background: linear-gradient(to left, #ffffff00 50%, #404040 50%) right;
-    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
-  }
-
-  .dark .links.active {
-    background: #404040; /* bg-neutral-700 */
+    @apply bg-gradient-to-r from-white to-white;
   }
 }
