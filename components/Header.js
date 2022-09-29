@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Links from "./Links";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
   return (
@@ -13,8 +14,9 @@ export default function Header() {
           </a>
         </Link>
 
-        <div>
+        <div className="flex items-center justify-around gap-4">
           <Links classNames="flex items-center justify-around gap-4" />
+          <ThemeSelector />
         </div>
       </nav>
     </header>
