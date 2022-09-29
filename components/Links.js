@@ -33,7 +33,7 @@ export default function Links({ classNames }) {
         </Link>
       </li>
       <li>
-        <Link href="/conoceme">
+        <Link href="/about">
           <a className="links">Conóceme</a>
         </Link>
       </li>
