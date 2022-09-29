@@ -11,7 +11,7 @@
 @layer components {
   .links {
     background: linear-gradient(to left, #ffffff00 50%, #d4d4d4 50%) right;
-    @apply transition-colors duration-200 ease-out bg-[length:210%] hover:bg-left;
+    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
   }
 
   .links.active {
@@ -20,7 +20,7 @@
 
   .dark .links {
     background: linear-gradient(to left, #ffffff00 50%, #404040 50%) right;
-    @apply transition-colors duration-200 ease-out bg-[length:210%] hover:bg-left;
+    @apply transition-all duration-200 ease-out bg-[length:210%] hover:bg-left;
   }
 
   .dark .links.active {
