@@ -46,7 +46,7 @@ export default function ThemeSelector() {
   };
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} title="Cambiar tema">
       <span>{darkThemeSelected ? <Moon /> : <Sun />}</span>
     </button>
   );
