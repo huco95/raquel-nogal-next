@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply min-h-screen text-gray-900 bg-white dark:text-white dark:bg-gray-800;
-  }
-}
-
 @layer components {
   /* Links animations from: https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40 */
   .links {
