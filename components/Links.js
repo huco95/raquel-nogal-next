@@ -1,41 +1,53 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+function buildLink({ path, label, isActive }) {
+  return (
+    <Link href={path}>
+      <a className={"links " + (isActive() ? "active" : "")}>{label}</a>
+    </Link>
+  );
+}
+
 export default function Links({ classNames }) {
   const router = useRouter();
 
   return (
     <ul className={classNames}>
       <li>
-        <Link href="/stories">
-          <a
-            className={
-              "links " + (router.pathname === "/stories" ? "active" : "")
-            }
-          >
-            Reportajes
-          </a>
-        </Link>
+        {buildLink({
+          path: "/stories",
+          label: "Reportajes",
+          isActive: () => router.pathname === "/stories",
+        })}
       </li>
       <li>
-        <Link href="/comunicacion">
-          <a className="links">Comunicación</a>
-        </Link>
+        {buildLink({
+          path: "/communication",
+          label: "Comunicación",
+          isActive: () => router.pathname === "/communication",
+        })}
       </li>
       <li>
-        <Link href="/marketing">
-          <a className="links">Marketing</a>
-        </Link>
+        {buildLink({
+          path: "/marketing",
+          label: "Marketing",
+          isActive: () => router.pathname === "/marketing",
+        })}
       </li>
       <li>
-        <Link href="/blog">
-          <a className="links">Blog</a>
-        </Link>
+        {buildLink({
+          path: "/blog",
+          label: "Blog",
+          isActive: () => router.pathname === "/blog",
+        })}
       </li>
       <li>
-        <Link href="/about">
-          <a className="links">Conóceme</a>
-        </Link>
+        {buildLink({
+          path: "/about",
+          label: "Conóceme",
+          isActive: () => router.pathname === "/about",
+        })}
       </li>
     </ul>
   );
