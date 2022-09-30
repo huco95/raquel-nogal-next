@@ -13,6 +13,9 @@ module.exports = {
       minHeight: {
         main: "calc(100vh - 112px)",
       },
+      fontFamily: {
+        body: ["Montserrat", "ui-sans-serif"],
+      },
     },
   },
   plugins: [],
