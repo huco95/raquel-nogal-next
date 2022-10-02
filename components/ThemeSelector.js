@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { ThemeContext } from "../store/theme.context";
+import { useEffect, useState } from "react";
 
 function Sun() {
   return (
@@ -36,18 +35,33 @@ function Moon() {
     </svg>
   );
 }
+
 export default function ThemeSelector() {
-  const { isDarkTheme, toggleThemeHandler } = useContext(ThemeContext);
-  const [darkThemeSelected, setDarkThemeSelected] = useState(isDarkTheme);
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setDarkTheme(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setDarkTheme(false);
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
 
   const toggleTheme = () => {
-    setDarkThemeSelected(!darkThemeSelected);
-    toggleThemeHandler();
+    setDarkTheme(!darkTheme);
+    localStorage.theme = !darkTheme ? "dark" : "light";
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
     <button onClick={toggleTheme} title="Cambiar tema">
-      <span>{darkThemeSelected ? <Moon /> : <Sun />}</span>
+      <span>{darkTheme ? <Moon /> : <Sun />}</span>
     </button>
   );
 }

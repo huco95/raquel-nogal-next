@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { ThemeContextProvider } from "../store/theme.context";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeContextProvider>
+    <>
       <Head>
         <title>Raquel Nogal</title>
         <meta
@@ -15,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
-    </ThemeContextProvider>
+    </>
   );
 }
 
