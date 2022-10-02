@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function StoryCard({
+export default function ArticleCard({
   title,
   description,
   publisher,
@@ -11,11 +11,11 @@ export default function StoryCard({
     <div className="flex items-center p-4 border-b border-r border-gray-200">
       <article>
         <h1 className="mb-1 text-xl font-bold">{title}</h1>
-        <p className="mb-4 text-justify text-gray-500 dark:text-gray-300">
+        <p className="text-justify text-gray-500 dark:text-gray-300">
           {description}
         </p>
 
-        <div className="flex justify-between">
+        <div className="mt-4 flex justify-between">
           <Link href={link}>
             <a
               target="_blank"

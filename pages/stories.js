@@ -1,7 +1,7 @@
-import StoryCard from "../components/StoryCard";
+import ArticleCard from "../components/ArticleCard";
 import Layout from "../components/Layout";
-import stories from "../content/stories/stories.json";
 import Head from "next/head";
+import articles from "../content/stories/articles.json";
 
 export default function Stories() {
   return (
@@ -12,15 +12,15 @@ export default function Stories() {
 
       <Layout>
         <div className="grid grid-cols-2 gap-x-10 gap-y-16">
-          {stories.map((story, index) => {
+          {articles.map((article, index) => {
             return (
-              <StoryCard
+              <ArticleCard
                 key={index}
-                title={story.title}
-                description={story.description}
-                publisher={story.publisher}
-                publishDate={story.date}
-                link={story.link}
+                title={article.title}
+                description={article.description}
+                publisher={article.publisher}
+                publishDate={article.date}
+                link={article.link}
               />
             );
           })}
