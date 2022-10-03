@@ -27,6 +27,7 @@ export default function Home() {
 
           <div className="w-4/6">
             <Image
+              priority
               src={profilePic}
               alt="Raquel Nogal"
               width={500}
