@@ -3,7 +3,6 @@ import { Head, Html, Main, NextScript } from "next/document";
 // Solution for dark theme flickering from: https://github.com/vercel/next.js/discussions/12533
 const setInitialTheme = `
   (function () {
-    console.log("HOLA");
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
