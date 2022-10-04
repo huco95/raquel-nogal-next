@@ -4,51 +4,49 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 const prefersColorSchemeDark = "(prefers-color-scheme: dark)";
 
 export default function ThemeSelector() {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
-    const onPrefersColorSchemeChange = (e) => {
-      !("theme" in localStorage) && e.matches
-        ? useDarkTheme()
-        : useLightTheme();
-    };
-
     localStorage.theme === "dark" ||
     (!("theme" in localStorage) &&
       window.matchMedia(prefersColorSchemeDark).matches)
-      ? useDarkTheme()
-      : useLightTheme();
+      ? darkTheme()
+      : lightTheme();
 
     window
       .matchMedia(prefersColorSchemeDark)
-      .addEventListener("change", onPrefersColorSchemeChange);
+      .addEventListener("change", (e) => {
+        !("theme" in localStorage) && e.matches ? darkTheme() : lightTheme();
+      });
 
     return () => {
       window
         .matchMedia(prefersColorSchemeDark)
-        .removeEventListener("change", onPrefersColorSchemeChange);
+        .removeEventListener("change", (e) => {
+          !("theme" in localStorage) && e.matches ? darkTheme() : lightTheme();
+        });
     };
   }, []);
 
-  const useDarkTheme = () => {
-    setDarkTheme(true);
+  const darkTheme = () => {
+    setIsDarkTheme(true);
     document.documentElement.classList.add("dark");
   };
 
-  const useLightTheme = () => {
-    setDarkTheme(false);
+  const lightTheme = () => {
+    setIsDarkTheme(false);
     document.documentElement.classList.remove("dark");
   };
 
   const toggleTheme = () => {
-    darkTheme ? useLightTheme() : useDarkTheme();
-    localStorage.theme = darkTheme ? "light" : "dark";
+    isDarkTheme ? lightTheme() : darkTheme();
+    localStorage.theme = isDarkTheme ? "light" : "dark";
   };
 
   return (
     <button onClick={toggleTheme} title="Cambiar tema">
       <span>
-        {darkTheme ? (
+        {isDarkTheme ? (
           <MoonIcon className="w-6 h-6" />
         ) : (
           <SunIcon className="w-6 h-6" />
