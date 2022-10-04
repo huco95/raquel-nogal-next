@@ -16,7 +16,7 @@ export default function Blog({ posts }) {
           {posts.map((post) => {
             return (
               <BlogPostCard
-                id={post.id}
+                key={post.id}
                 title={post.title}
                 publishedAt={parseDate(post.publishedAt)}
                 heroImage={post.heroImage}

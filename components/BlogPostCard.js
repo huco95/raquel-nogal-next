@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function BlogPostCard({
-  id,
-  title,
-  publishedAt,
-  heroImage,
-  href,
-}) {
+export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
   return (
-    <Link key={id} href={href}>
+    <Link href={href}>
       <a className="relative group h-64">
         <Image
           src={heroImage}
