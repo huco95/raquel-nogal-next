@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ArticleCard({
+export default function PortfolioCard({
   title,
   description,
   publisher,

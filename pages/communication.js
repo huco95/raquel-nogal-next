@@ -1,7 +1,7 @@
-import ArticleCard from "../components/ArticleCard";
+import PortfolioCard from "../components/PortfolioCard";
 import Layout from "../components/Layout";
 import Head from "next/head";
-import articles from "../content/communication/articles.json";
+import articles from "../content/portfolio/communication/articles.json";
 
 export default function Communication() {
   return (
@@ -14,7 +14,7 @@ export default function Communication() {
         <div className="grid grid-cols-2 gap-x-10 gap-y-16">
           {articles.map((article, index) => {
             return (
-              <ArticleCard
+              <PortfolioCard
                 key={index}
                 title={article.title}
                 description={article.description}

@@ -1,9 +1,10 @@
-import Head from "next/head";
 import "../styles/globals.css";
+import TinaProvider from "../.tina/components/TinaDynamicProvider.js";
+import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
-    <>
+    <TinaProvider>
       <Head>
         <title>Raquel Nogal</title>
         <meta
@@ -12,10 +13,9 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Component {...pageProps} />
-    </>
+    </TinaProvider>
   );
-}
+};
 
-export default MyApp;
+export default App;

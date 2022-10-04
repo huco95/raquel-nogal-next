@@ -32,7 +32,7 @@ export default function Home() {
               alt="Raquel Nogal"
               width={500}
               height={500}
-              className="object-cover rounded-lg "
+              className="object-cover rounded-lg"
             />
           </div>
         </main>
