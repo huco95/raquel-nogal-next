@@ -12,8 +12,6 @@ export default function BlogPostSlug(props) {
     data: props.data,
   });
 
-  console.log(data.post);
-
   return isLoading ? (
     <>
       <h1>Loading...</h1>
