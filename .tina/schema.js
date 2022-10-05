@@ -42,8 +42,6 @@ const schema = defineSchema({
           type: "image",
           label: "Imagen de portada",
           name: "heroImage",
-          parse: (filename) => `${filename}`,
-          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
         },
         {
           type: "string",
