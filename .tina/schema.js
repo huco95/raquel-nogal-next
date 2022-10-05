@@ -43,7 +43,7 @@ const schema = defineSchema({
           label: "Imagen de portada",
           name: "heroImage",
           parse: (filename) => `${filename}`,
-          uploadDir: () => `/blog/images/`,
+          uploadDir: () => `blog/images/`,
           previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
         },
         {
