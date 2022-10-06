@@ -10,7 +10,7 @@ export default function Curriculum() {
       <div className="flex justify-center gap-x-10">
         <Link href="/curriculum/CV_RaquelNogal_ES.pdf">
           <a
-            className="flex items-center justify-center italic links gap-x-2"
+            className="flex items-center justify-center italic animated-link gap-x-2"
             target="_blank"
           >
             Español
@@ -19,7 +19,7 @@ export default function Curriculum() {
 
         <Link href="/curriculum/CV_RaquelNogal_EN.pdf">
           <a
-            className="flex items-center justify-center italic links gap-x-2"
+            className="flex items-center justify-center italic animated-link gap-x-2"
             target="_blank"
           >
             Inglés

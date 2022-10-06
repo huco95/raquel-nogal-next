@@ -1,22 +1,21 @@
-import Link from "next/link";
-import Links from "./Links";
+import HomeLink from "./menu/HomeLink";
+import Menu from "./menu/Menu";
+import MobileMenu from "./menu/MobileMenu";
 import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
   return (
-    <header className="">
-      <nav className="flex items-center justify-between px-4 m-auto border-b max-w-7xl border-b-gray-200 h-header">
-        <Link href="/">
-          <a>
-            <h1 className="text-3xl font-medium tracking-wider">
-              Raquel Nogal
-            </h1>
-          </a>
-        </Link>
+    <header>
+      <nav className="flex items-center justify-between p-5 sm:px-4 m-auto border-b max-w-7xl border-b-gray-200 sm:h-header">
+        <HomeLink />
 
-        <div className="flex items-center justify-around gap-4">
-          <Links classNames="flex items-center justify-around gap-4" />
+        <div className="hidden sm:flex items-center justify-around gap-4">
+          <Menu className="flex items-center justify-around gap-4" />
           <ThemeSelector />
+        </div>
+
+        <div className="sm:hidden">
+          <MobileMenu />
         </div>
       </nav>
     </header>
