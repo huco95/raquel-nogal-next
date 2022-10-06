@@ -7,19 +7,25 @@ export default function usePrefersColorSchemeDark() {
     useState(false);
 
   useEffect(() => {
+    const mediaQueryColorScheme = window.matchMedia(prefersColorSchemeDark);
     const handlePrefersColorSchmeChange = (e) =>
-      !("theme" in localStorage) && e.matches
+      e.matches
         ? setIsPrefersColorSchemaDark(true)
         : setIsPrefersColorSchemaDark(false);
 
-    window
-      .matchMedia(prefersColorSchemeDark)
-      .addEventListener("change", handlePrefersColorSchmeChange);
+    // Set inital value
+    setIsPrefersColorSchemaDark(mediaQueryColorScheme.matches);
+
+    mediaQueryColorScheme.addEventListener(
+      "change",
+      handlePrefersColorSchmeChange
+    );
 
     return () => {
-      window
-        .matchMedia(prefersColorSchemeDark)
-        .removeEventListener("change", handlePrefersColorSchmeChange);
+      mediaQueryColorScheme.removeEventListener(
+        "change",
+        handlePrefersColorSchmeChange
+      );
     };
   });
 
