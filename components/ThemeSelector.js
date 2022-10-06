@@ -1,32 +1,21 @@
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-
-const prefersColorSchemeDark = "(prefers-color-scheme: dark)";
+import usePrefersColorSchemeDark from "../hooks/usePrefersColorSchemeDark";
 
 export default function ThemeSelector() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const isPrefersColorSchemaDark = usePrefersColorSchemeDark();
 
   useEffect(() => {
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia(prefersColorSchemeDark).matches)
-      ? darkTheme()
-      : lightTheme();
-
-    window
-      .matchMedia(prefersColorSchemeDark)
-      .addEventListener("change", (e) => {
-        !("theme" in localStorage) && e.matches ? darkTheme() : lightTheme();
-      });
-
-    return () => {
-      window
-        .matchMedia(prefersColorSchemeDark)
-        .removeEventListener("change", (e) => {
-          !("theme" in localStorage) && e.matches ? darkTheme() : lightTheme();
-        });
-    };
-  }, []);
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && isPrefersColorSchemaDark)
+    ) {
+      darkTheme();
+    } else {
+      lightTheme();
+    }
+  }, [isPrefersColorSchemaDark]);
 
   const darkTheme = () => {
     setIsDarkTheme(true);
