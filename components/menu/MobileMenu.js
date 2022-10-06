@@ -1,6 +1,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import useWindowWidth from "../../hooks/UseWindowWidth";
+import useWindowWidth from "../../hooks/useWindowWidth";
 import HomeLink from "./HomeLink";
 import Menu from "./Menu";
 
