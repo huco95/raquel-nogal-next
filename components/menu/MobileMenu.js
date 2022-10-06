@@ -19,7 +19,7 @@ export default function MobileMenu() {
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-  }, [width]);
+  }, [width, isMenuOpen]);
 
   const toggleMenu = () => {
     document.body.classList.toggle("overflow-hidden");
@@ -41,7 +41,7 @@ export default function MobileMenu() {
         <div className="flex items-center justify-between">
           <HomeLink />
 
-          <div onClick={toggleMenu}>
+          <div onClick={toggleMenu} className="cursor-pointer">
             <XMarkIcon className="w-6 h-6 float-right" />
           </div>
         </div>
