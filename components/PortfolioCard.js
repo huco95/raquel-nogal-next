@@ -8,28 +8,22 @@ export default function PortfolioCard({
   link,
 }) {
   return (
-    <div className="flex items-center p-4 border-b border-r border-gray-200">
-      <article>
-        <h1 className="mb-1 text-xl font-bold">{title}</h1>
-        <p className="text-justify text-gray-500 dark:text-gray-300">
-          {description}
-        </p>
-
-        <div className="mt-4 flex justify-between">
-          <Link href={link}>
-            <a
-              target="_blank"
-              className="text-sm text-gray-500 dark:text-gray-300 hover:underline"
-            >
-              Leer
-            </a>
-          </Link>
-
-          <p className="text-sm italic text-gray-500 dark:text-gray-300">
-            <span>{publisher}</span> · <span>{publishDate}</span>
+    <Link href={link}>
+      <a className="flex flex-col items-center group" target="_blank">
+        <article className="w-full">
+          <h1 className="mb-1 text-xl font-bold">{title}</h1>
+          <p className="text-justify text-gray-500 dark:text-gray-300">
+            {description}
           </p>
-        </div>
-      </article>
-    </div>
+
+          <div className="flex justify-end mt-4">
+            <p className="text-sm italic text-gray-500 dark:text-gray-300">
+              <span>{publisher}</span> · <span>{publishDate}</span>
+            </p>
+          </div>
+        </article>
+        <span className="h-0.5 w-10 bg-white group-hover:w-40 transition-all mt-4"></span>
+      </a>
+    </Link>
   );
 }
