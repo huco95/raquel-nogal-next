@@ -4,14 +4,15 @@ import Link from "next/link";
 export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
   return (
     <Link href={href}>
-      <a className="relative group h-64">
+      <a className="relative h-64 group">
         <Image
+          priority
           src={heroImage}
           layout="fill"
           objectFit="cover"
-          className="rounded-lg grayscale brightness-50 transition-all duration-500 group-hover:grayscale-0"
+          className="transition-all duration-500 rounded-lg grayscale brightness-50 group-hover:grayscale-0"
         ></Image>
-        <div className="absolute bottom-5 left-5 flex flex-col">
+        <div className="absolute flex flex-col bottom-5 left-5">
           <p className="text-xl font-bold text-white">{title}</p>
           <span className="text-sm italic text-gray-200">{publishedAt}</span>
         </div>
