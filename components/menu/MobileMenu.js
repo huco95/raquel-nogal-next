@@ -34,7 +34,7 @@ export default function MobileMenu() {
 
       <div
         className={
-          "fixed h-screen w-screen inset-0 bg-white dark:bg-gray-800 p-5" +
+          "fixed h-screen w-screen inset-0 bg-white dark:bg-gray-800 p-5 z-10" +
           (isMenuOpen ? "" : " hidden")
         }
       >
@@ -42,11 +42,11 @@ export default function MobileMenu() {
           <HomeLink />
 
           <div onClick={toggleMenu} className="cursor-pointer">
-            <XMarkIcon className="w-6 h-6 float-right" />
+            <XMarkIcon className="float-right w-6 h-6" />
           </div>
         </div>
 
-        <Menu className="mt-10 flex flex-col gap-10" />
+        <Menu className="flex flex-col gap-10 mt-10" />
       </div>
     </div>
   );
