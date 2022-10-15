@@ -17,7 +17,7 @@ export default function BlogPost({ title, body, publishedAt, heroImage }) {
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 post-body">
         <TinaMarkdown content={body} />
       </div>
     </article>

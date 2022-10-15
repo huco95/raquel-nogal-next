@@ -17,4 +17,8 @@
   .dark .animated-link {
     @apply after:bg-white;
   }
+
+  .post-body p {
+    @apply mb-4;
+  }
 }
