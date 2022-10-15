@@ -9,7 +9,7 @@ export default function BlogPost({ title, body, publishedAt, heroImage }) {
           src={heroImage}
           layout="fill"
           objectFit="cover"
-          className="grayscale brightness-50 rounded-lg"
+          className="rounded-lg grayscale brightness-50"
         ></Image>
         <div className="absolute bottom-0 left-1/2 flex flex-col text-center translate-x-[-50%] translate-y-[-50%]">
           <h1 className="text-4xl font-bold text-white">{title}</h1>
@@ -17,7 +17,7 @@ export default function BlogPost({ title, body, publishedAt, heroImage }) {
         </div>
       </div>
 
-      <div className="mt-5 px-5">
+      <div className="mt-5">
         <TinaMarkdown content={body} />
       </div>
     </article>
