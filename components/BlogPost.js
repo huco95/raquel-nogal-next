@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { parseDate } from "../services/dateService";
 
 export default function BlogPost({ title, body, publishedAt, heroImage }) {
   return (
@@ -13,7 +14,9 @@ export default function BlogPost({ title, body, publishedAt, heroImage }) {
         ></Image>
         <div className="absolute bottom-0 left-1/2 flex flex-col text-center translate-x-[-50%] translate-y-[-50%]">
           <h1 className="text-4xl font-bold text-white">{title}</h1>
-          <span className="text-sm italic text-gray-200">{publishedAt}</span>
+          <span className="text-sm italic text-gray-200">
+            {parseDate(publishedAt)}
+          </span>
         </div>
       </div>
 

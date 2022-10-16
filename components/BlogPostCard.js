@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { parseDate } from "../services/dateService";
 
 export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
   return (
@@ -14,7 +15,9 @@ export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
         ></Image>
         <div className="absolute flex flex-col bottom-5 left-5">
           <p className="text-xl font-bold text-white">{title}</p>
-          <span className="text-sm italic text-gray-200">{publishedAt}</span>
+          <span className="text-sm italic text-gray-200">
+            {parseDate(publishedAt)}
+          </span>
         </div>
       </a>
     </Link>

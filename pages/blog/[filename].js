@@ -26,7 +26,7 @@ export default function BlogPostSlug(props) {
         <BlogPost
           title={data.post.title}
           body={data.post.body}
-          publishedAt={parseDate(data.post.publishedAt)}
+          publishedAt={data.post.publishedAt}
           heroImage={data.post.heroImage}
         />
       </Layout>

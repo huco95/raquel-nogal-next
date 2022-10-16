@@ -1,4 +1,5 @@
 import { defineSchema, defineConfig } from "tinacms";
+import { createPortfolioCollection } from "./portofilio";
 import { client } from "./__generated__/client";
 
 const branch =
@@ -15,11 +16,13 @@ const schema = defineSchema({
     media: {
       tina: {
         publicFolder: "public",
-        mediaRoot: "",
+        mediaRoot: "images",
       },
     },
   },
   collections: [
+    createPortfolioCollection("stories", "Reportajes"),
+    createPortfolioCollection("communication", "Comunicación"),
     {
       label: "Entradas del blog",
       name: "post",
@@ -31,27 +34,34 @@ const schema = defineSchema({
           return `/blog/${document._sys.filename}`;
         },
       },
+      defaultItem: () => ({
+        publishedAt: new Date(),
+      }),
       fields: [
         {
           type: "datetime",
           label: "Fecha de publicación",
           name: "publishedAt",
           dateFormat: "DD-MM-YYYY",
+          required: true,
         },
         {
           type: "image",
           label: "Imagen de portada",
           name: "heroImage",
+          required: true,
         },
         {
           type: "string",
           label: "Título",
           name: "title",
+          required: true,
         },
         {
           type: "rich-text",
           label: "Contenido",
           name: "body",
+          required: true,
           isBody: true,
           templates: [
             {

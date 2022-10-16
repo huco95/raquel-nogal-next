@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import client from "../../.tina/__generated__/client";
 import BlogPostCard from "../../components/BlogPostCard";
-import { parseDate } from "../../services/dateService";
 
 export default function Blog({ posts }) {
   return (
@@ -18,7 +17,7 @@ export default function Blog({ posts }) {
               <BlogPostCard
                 key={post.id}
                 title={post.title}
-                publishedAt={parseDate(post.publishedAt)}
+                publishedAt={post.publishedAt}
                 heroImage={post.heroImage}
                 href={post.href}
               />
