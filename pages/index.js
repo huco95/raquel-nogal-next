@@ -3,6 +3,8 @@ import ThemeSelector from "../components/ThemeSelector";
 import profilePic from "../public/images/raquel-nogal.webp";
 import Menu from "../components/menu/Menu";
 import MobileMenu from "../components/menu/MobileMenu";
+import TwitterLink from "../components/social/TwitterLink";
+import LinkedinLink from "../components/social/LinkedInLink";
 
 export default function Home() {
   return (
@@ -47,7 +49,12 @@ export default function Home() {
                 </h2>
               </div>
 
-              <Menu className="leading-7"></Menu>
+              <Menu className="mb-4 leading-7"></Menu>
+
+              <div className="flex flex-row gap-x-2">
+                <TwitterLink />
+                <LinkedinLink />
+              </div>
             </div>
 
             <div className="w-4/6">
