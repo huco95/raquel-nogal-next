@@ -31,18 +31,22 @@ export default function Stories({ articles }) {
 }
 
 export async function getStaticProps() {
-  const storiesListData = await client.queries.storiesConnection();
+  const storiesListData = await client.queries.storiesConnection({
+    sort: "publishedAt",
+  });
 
   return {
     props: {
-      articles: storiesListData.data.storiesConnection.edges.map((article) => ({
-        id: article.node.id,
-        title: article.node.title,
-        description: article.node.description,
-        publisher: article.node.publisher,
-        publishedAt: article.node.publishedAt,
-        url: article.node.url,
-      })),
+      articles: storiesListData.data.storiesConnection.edges
+        .reverse()
+        .map((article) => ({
+          id: article.node.id,
+          title: article.node.title,
+          description: article.node.description,
+          publisher: article.node.publisher,
+          publishedAt: article.node.publishedAt,
+          url: article.node.url,
+        })),
     },
   };
 }

@@ -30,10 +30,13 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const postsListData = await client.queries.postConnection();
+  const postsListData = await client.queries.postConnection({
+    sort: "publishedAt",
+  });
+
   return {
     props: {
-      posts: postsListData.data.postConnection.edges.map((post) => ({
+      posts: postsListData.data.postConnection.edges.reverse().map((post) => ({
         id: post.node.id,
         title: post.node.title,
         publishedAt: post.node.publishedAt,
