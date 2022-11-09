@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="sm:hidden">
-        <div className="fixed top-5 right-5 z-10">
+        <div className="fixed z-10 top-5 right-5">
           <MobileMenu />
         </div>
 
@@ -22,7 +22,7 @@ export default function Home() {
             className="grayscale brightness-50"
           />
         </div>
-        <div className="absolute bottom-5 left-5 text-white">
+        <div className="absolute text-white bottom-5 left-5">
           <h1 className="text-4xl font-medium tracking-wider">Raquel Nogal</h1>
           <h2 className="italic font-light">
             Periodismo | Marketing Digital
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hidden sm:block">
+      <div className="hidden px-4 sm:block">
         <div className="fixed top-5 right-5">
           <ThemeSelector></ThemeSelector>
         </div>
