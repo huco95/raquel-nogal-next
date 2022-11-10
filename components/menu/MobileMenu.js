@@ -12,7 +12,7 @@ export default function MobileMenu({ buttonClassName }) {
 
   useEffect(() => {
     if (isMenuOpen) {
-      if (width > 640) {
+      if (width > 768) {
         setIsMenuOpen(false);
         document.body.classList.remove("overflow-hidden");
       } else {
