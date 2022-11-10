@@ -8,7 +8,7 @@ import Social from "../components/social/Social";
 export default function Home() {
   return (
     <>
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <div className="fixed z-10 top-5 right-5">
           <MobileMenu buttonClassName="text-white" />
         </div>
@@ -31,9 +31,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hidden px-4 sm:block">
+      <div className="hidden px-4 md:block">
         <div className="fixed top-5 right-5">
-          <ThemeSelector></ThemeSelector>
+          <ThemeSelector />
         </div>
 
         <div className="flex items-center justify-center min-h-screen">
