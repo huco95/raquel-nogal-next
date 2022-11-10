@@ -2,7 +2,7 @@ import SocialLink from "./SocialLink";
 
 export default function TwitterLink() {
   return (
-    <SocialLink href="https://twitter.com/raqns">
+    <SocialLink href="https://twitter.com/raqns" title="Twitter">
       <svg className="w-6 h-6" viewBox="0 0 248 204">
         <path
           fill="currentColor"

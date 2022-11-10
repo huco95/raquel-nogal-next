@@ -2,7 +2,10 @@ import SocialLink from "./SocialLink";
 
 export default function LinkedinLink() {
   return (
-    <SocialLink href="https://www.linkedin.com/in/raquel-nogal-santamar%C3%ADa">
+    <SocialLink
+      href="https://www.linkedin.com/in/raquel-nogal-santamar%C3%ADa"
+      title="Linkedin"
+    >
       <svg className="w-6 h-6" viewBox="0 0 50 50">
         <path
           fill="currentColor"
