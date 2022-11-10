@@ -3,15 +3,14 @@ import ThemeSelector from "../components/ThemeSelector";
 import profilePic from "../public/images/raquel-nogal.webp";
 import Menu from "../components/menu/Menu";
 import MobileMenu from "../components/menu/MobileMenu";
-import TwitterLink from "../components/social/TwitterLink";
-import LinkedinLink from "../components/social/LinkedinLink";
+import Social from "../components/social/Social";
 
 export default function Home() {
   return (
     <>
       <div className="sm:hidden">
         <div className="fixed z-10 top-5 right-5">
-          <MobileMenu />
+          <MobileMenu buttonClassName="text-white" />
         </div>
 
         <div className="relative h-screen">
@@ -49,12 +48,8 @@ export default function Home() {
                 </h2>
               </div>
 
-              <Menu className="mb-4 leading-7"></Menu>
-
-              <div className="flex flex-row gap-x-2">
-                <TwitterLink />
-                <LinkedinLink />
-              </div>
+              <Menu className="leading-7"></Menu>
+              <Social className="flex flex-row gap-x-4 mt-4" />
             </div>
 
             <div className="w-4/6">

@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Curriculum from "../components/Curriculum";
+import Link from "next/link";
 import Layout from "../components/Layout";
+import Social from "../components/social/Social";
 
 export default function About() {
   return (
@@ -10,7 +11,7 @@ export default function About() {
       </Head>
 
       <Layout>
-        <div className="mb-8">
+        <div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -22,7 +23,39 @@ export default function About() {
           </p>
         </div>
 
-        <Curriculum />
+        <div className="text-center mt-8">
+          <h2 className="mb-2 text-lg font-semibold text-gray-500 dark:text-gray-300">
+            Currículum
+          </h2>
+
+          <div className="flex justify-center gap-x-10">
+            <Link href="/curriculum/CV_RaquelNogal_ES.pdf">
+              <a
+                className="flex items-center justify-center italic animated-link gap-x-2"
+                target="_blank"
+              >
+                Español
+              </a>
+            </Link>
+
+            <Link href="/curriculum/CV_RaquelNogal_EN.pdf">
+              <a
+                className="flex items-center justify-center italic animated-link gap-x-2"
+                target="_blank"
+              >
+                Inglés
+              </a>
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <h2 className="mb-2 text-lg font-semibold text-gray-500 dark:text-gray-300">
+            Contacto
+          </h2>
+
+          <Social className="flex flex-row justify-center gap-x-4 mt-4" />
+        </div>
       </Layout>
     </>
   );
