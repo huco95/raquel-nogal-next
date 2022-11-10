@@ -4,7 +4,7 @@ import profilePic from "../public/images/raquel-nogal.webp";
 import Menu from "../components/menu/Menu";
 import MobileMenu from "../components/menu/MobileMenu";
 import TwitterLink from "../components/social/TwitterLink";
-import LinkedinLink from "../components/social/LinkedInLink";
+import LinkedinLink from "../components/social/LinkedinLink";
 
 export default function Home() {
   return (
