@@ -2,6 +2,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import Social from "../social/Social";
+import ThemeSelector from "../ThemeSelector";
 import HomeLink from "./HomeLink";
 import Menu from "./Menu";
 
@@ -48,7 +49,10 @@ export default function MobileMenu({ buttonClassName }) {
         </div>
 
         <Menu className="flex flex-col gap-10 mt-10" />
-        <Social className="flex flex-row gap-x-4 mt-10" />
+        <div className="flex flex-row justify-between items-center mt-10">
+          <Social className="flex flex-row gap-x-4" />
+          <ThemeSelector />
+        </div>
       </div>
     </div>
   );
