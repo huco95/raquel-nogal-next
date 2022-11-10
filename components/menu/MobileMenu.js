@@ -1,10 +1,11 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import useWindowWidth from "../../hooks/useWindowWidth";
+import Social from "../social/Social";
 import HomeLink from "./HomeLink";
 import Menu from "./Menu";
 
-export default function MobileMenu() {
+export default function MobileMenu({ buttonClassName }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const width = useWindowWidth();
 
@@ -29,7 +30,7 @@ export default function MobileMenu() {
   return (
     <div>
       <div onClick={toggleMenu} className="cursor-pointer">
-        <Bars3Icon className="w-6 h-6 text-white" />
+        <Bars3Icon className={"w-6 h-6 " + buttonClassName} />
       </div>
 
       <div
@@ -47,6 +48,7 @@ export default function MobileMenu() {
         </div>
 
         <Menu className="flex flex-col gap-10 mt-10" />
+        <Social className="flex flex-row gap-x-4 mt-10" />
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="min-h-screen text-gray-900 bg-white dark:text-white dark:bg-gray-800 font-body transition-all duration-300">
+      <body className="min-h-screen text-gray-900 bg-slate-50 dark:text-white dark:bg-gray-800 font-body transition-all duration-300">
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Main />
         <NextScript />
