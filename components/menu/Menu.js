@@ -2,6 +2,10 @@ import MenuLink from "./MenuLink";
 
 const links = [
   {
+    path: "/about",
+    label: "Conóceme",
+  },
+  {
     path: "/stories",
     label: "Reportajes",
   },
@@ -16,10 +20,6 @@ const links = [
   {
     path: "/blog",
     label: "Blog",
-  },
-  {
-    path: "/about",
-    label: "Conóceme",
   },
 ];
 

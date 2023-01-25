@@ -12,18 +12,26 @@ export default function About() {
 
       <Layout>
         <div>
+          <p className="mb-2">
+            Graduada en el grado de Periodismo por la Universidad Complutense de
+            Madrid y cuento con un Máster en Marketing Digital de la misma
+            universidad. Actualmente compagino la beca Schuman de comunicación
+            en la DG de Comunicación del Parlamento Europeo con el estudio del
+            Máster en Unión Europea en el Instituto Europeo de Bilbao.
+          </p>
+          <p className="mb-2">
+            Mi experiencia se centra en medios de comunicación y en agencias de
+            comunicación y marketing donde, gracias a mis conocimientos de
+            idiomas, he podido obtener experiencia internacional.
+          </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Soy una persona comprometida, observadora y curiosa, algo que me ha
+            ayudado a crecer en un mundo tan cambiante y creativo como es el de
+            la comunicación.
           </p>
         </div>
 
-        <div className="text-center mt-8">
+        <div className="mt-8 text-center">
           <h2 className="mb-2 text-lg font-semibold text-gray-500 dark:text-gray-300">
             Currículum
           </h2>
@@ -49,12 +57,12 @@ export default function About() {
           </div>
         </div>
 
-        <div className="text-center mt-8">
+        <div className="mt-8 text-center">
           <h2 className="mb-2 text-lg font-semibold text-gray-500 dark:text-gray-300">
             Contacto
           </h2>
 
-          <Social className="flex flex-row justify-center gap-x-4 mt-4" />
+          <Social className="flex flex-row justify-center mt-4 gap-x-4" />
         </div>
       </Layout>
     </>
