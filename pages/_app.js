@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import TinaProvider from "../.tina/components/TinaDynamicProvider.js";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -14,6 +15,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </TinaProvider>
   );
 };
