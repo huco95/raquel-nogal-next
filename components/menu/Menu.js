@@ -14,8 +14,8 @@ const links = [
     label: "Comunicación",
   },
   {
-    path: "/marketing",
-    label: "Marketing",
+    path: "/social-media",
+    label: "Redes sociales",
   },
   {
     path: "/blog",

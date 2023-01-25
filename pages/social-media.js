@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 
-export default function Marketing() {
+export default function SocialMedia() {
   return (
     <>
       <Head>
-        <title>Raquel Nogal - Marketing</title>
+        <title>Raquel Nogal - Redes sociales</title>
       </Head>
 
       <Layout></Layout>
