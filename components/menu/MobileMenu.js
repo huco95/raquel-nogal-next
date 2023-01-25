@@ -31,7 +31,7 @@ export default function MobileMenu({ buttonClassName }) {
   return (
     <div>
       <div onClick={toggleMenu} className="cursor-pointer">
-        <Bars3Icon className={"w-5 w-5 " + buttonClassName} />
+        <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
       </div>
 
       <div
@@ -44,7 +44,7 @@ export default function MobileMenu({ buttonClassName }) {
           <HomeLink />
 
           <div onClick={toggleMenu} className="cursor-pointer">
-            <XMarkIcon className="float-right w-5 w-5" />
+            <XMarkIcon className="float-right w-5 h-5" />
           </div>
         </div>
 
