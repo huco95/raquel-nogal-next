@@ -3,8 +3,8 @@ import SocialLink from "./SocialLink";
 export default function MailLink() {
   return (
     <SocialLink
-      href="mailto:raquel_nogal@hotmail.com"
-      title="raquel_nogal@hotmail.com"
+      href="mailto:rnogalsantamaria@gmail.com"
+      title="rnogalsantamaria@gmail.com"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
         <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
