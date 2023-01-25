@@ -36,9 +36,9 @@ export default function ThemeSelector() {
     <button onClick={toggleTheme} title="Cambiar tema">
       <span>
         {isDarkTheme ? (
-          <MoonIcon className="w-6 h-6" />
+          <MoonIcon className="w-5 w-5" />
         ) : (
-          <SunIcon className="w-6 h-6" />
+          <SunIcon className="w-5 w-5" />
         )}
       </span>
     </button>

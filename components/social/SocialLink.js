@@ -6,7 +6,7 @@ export default function SocialLink({ href, children, title }) {
       <a
         title={title}
         target="_blank"
-        className="text-gray-500 hover:text-gray-400"
+        className="flex items-center justify-center text-gray-500 hover:text-gray-400"
       >
         {children}
       </a>
