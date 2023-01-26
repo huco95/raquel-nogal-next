@@ -1,9 +1,8 @@
 import Head from "next/head";
-import { useTina } from "tinacms/dist/edit-state";
+import { useTina } from "tinacms/dist/react";
 import client from "../../.tina/__generated__/client";
 import BlogPost from "../../components/BlogPost";
 import Layout from "../../components/Layout";
-import { parseDate } from "../../services/dateService";
 
 export default function BlogPostSlug(props) {
   const { data, isLoading } = useTina({

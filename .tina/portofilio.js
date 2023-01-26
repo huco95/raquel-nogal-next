@@ -38,3 +38,47 @@ export function createPortfolioCollection(name, label) {
     ],
   };
 }
+
+export function createSocialMediaCollection() {
+  return {
+    label: "Redes Sociales",
+    name: "socialMedia",
+    path: `content/portfolio/social-media`,
+    format: "json",
+    fields: [
+      {
+        type: "image",
+        label: "Imagen del post",
+        name: "postImage",
+        required: true,
+      },
+      {
+        type: "string",
+        label: "Usuario",
+        name: "username",
+        required: true,
+      },
+      {
+        type: "rich-text",
+        label: "Texto del post",
+        name: "caption",
+      },
+      {
+        type: "string",
+        label: "Enlace del post",
+        name: "url",
+        required: true,
+      },
+      {
+        type: "string",
+        label: "Red social",
+        name: "socialNetwork",
+        required: true,
+        options: [
+          { label: "Instagram", value: "instagram" },
+          { label: "LinkedIn", value: "linkedin" },
+        ],
+      },
+    ],
+  };
+}

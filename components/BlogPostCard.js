@@ -5,7 +5,7 @@ import { parseDate } from "../services/dateService";
 export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
   return (
     <Link href={href}>
-      <a className="relative h-64 group">
+      <a className="relative h-64 rounded-lg shadow group">
         <Image
           priority
           src={heroImage}
