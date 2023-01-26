@@ -9,6 +9,7 @@ export default function InstagramCard({ image, username, caption, url }) {
       <Image
         priority
         src={image}
+        alt={username}
         layout="fill"
         objectFit="cover"
         className="transition-all duration-500 rounded-lg grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100"

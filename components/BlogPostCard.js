@@ -9,6 +9,7 @@ export default function BlogPostCard({ title, publishedAt, heroImage, href }) {
         <Image
           priority
           src={heroImage}
+          alt={title}
           layout="fill"
           objectFit="cover"
           className="transition-all duration-500 rounded-lg grayscale brightness-50 group-hover:grayscale-0"

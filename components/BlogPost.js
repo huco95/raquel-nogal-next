@@ -8,6 +8,7 @@ export default function BlogPost({ title, body, publishedAt, heroImage }) {
       <div className="relative w-full h-64">
         <Image
           src={heroImage}
+          alt={title}
           layout="fill"
           objectFit="cover"
           className="rounded-lg grayscale brightness-50"
