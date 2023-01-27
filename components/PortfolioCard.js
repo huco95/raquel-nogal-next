@@ -24,7 +24,7 @@ export default function PortfolioCard({
             </p>
           </div>
         </article>
-        <span className="h-0.5 w-10 bg-white group-hover:w-40 transition-all mt-4"></span>
+        <span className="h-0.5 w-10 bg-gray-800 dark:bg-white group-hover:w-40 transition-all mt-4"></span>
       </a>
     </Link>
   );
