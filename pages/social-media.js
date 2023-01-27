@@ -11,7 +11,7 @@ export default function SocialMedia({ posts }) {
       </Head>
 
       <Layout>
-        <div className="flex">
+        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => {
             return (
               <InstagramCard
