@@ -29,13 +29,10 @@ export default function MobileMenu({ buttonClassName }) {
   };
 
   return (
-    <div>
-      <div className="flex items-center justify-between">
-        {/* This is a hack to make the menu button appear in the same position when the menu is open */}
-        <HomeLink className="invisible" />
-        <div onClick={toggleMenu} className="cursor-pointer">
-          <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
-        </div>
+    <>
+      <div onClick={toggleMenu} className="cursor-pointer">
+        {/* TODO: fix icon position on home page */}
+        <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
       </div>
 
       <div
@@ -53,11 +50,11 @@ export default function MobileMenu({ buttonClassName }) {
         </div>
 
         <Menu className="flex flex-col gap-10 mt-10" />
-        <div className="flex flex-row justify-between items-center mt-10">
+        <div className="flex flex-row items-center justify-between mt-10">
           <Social className="flex flex-row gap-x-4" />
           <ThemeSelector />
         </div>
       </div>
-    </div>
+    </>
   );
 }
