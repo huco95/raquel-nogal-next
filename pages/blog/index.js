@@ -11,7 +11,7 @@ export default function Blog({ posts }) {
       </Head>
 
       <Layout>
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-8">
           {posts.map((post) => {
             return (
               <BlogPostCard
