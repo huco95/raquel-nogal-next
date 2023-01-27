@@ -4,12 +4,14 @@ import profilePic from "../public/images/raquel-nogal.webp";
 import Menu from "../components/menu/Menu";
 import MobileMenu from "../components/menu/MobileMenu";
 import Social from "../components/social/Social";
+import HomeLink from "../components/menu/HomeLink";
 
 export default function Home() {
   return (
     <>
-      <div className="md:hidden h-full">
-        <div className="fixed z-10 top-5 right-5">
+      <div className="h-full md:hidden">
+        <div className="fixed z-10 flex items-center justify-between top-5 right-5">
+          <HomeLink className="invisible" />
           <MobileMenu buttonClassName="text-white" />
         </div>
 
@@ -49,7 +51,7 @@ export default function Home() {
               </div>
 
               <Menu className="leading-7"></Menu>
-              <Social className="flex flex-row gap-x-4 mt-4" />
+              <Social className="flex flex-row mt-4 gap-x-4" />
             </div>
 
             <div className="w-4/6">

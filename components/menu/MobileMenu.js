@@ -31,7 +31,6 @@ export default function MobileMenu({ buttonClassName }) {
   return (
     <>
       <div onClick={toggleMenu} className="cursor-pointer">
-        {/* TODO: fix icon position on home page */}
         <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
       </div>
 
