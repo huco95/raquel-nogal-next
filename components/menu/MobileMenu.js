@@ -30,8 +30,12 @@ export default function MobileMenu({ buttonClassName }) {
 
   return (
     <div>
-      <div onClick={toggleMenu} className="cursor-pointer">
-        <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
+      <div className="flex items-center justify-between">
+        {/* This is a hack to make the menu button appear in the same position when the menu is open */}
+        <HomeLink className="invisible" />
+        <div onClick={toggleMenu} className="cursor-pointer">
+          <Bars3Icon className={"w-5 h-5 " + buttonClassName} />
+        </div>
       </div>
 
       <div
