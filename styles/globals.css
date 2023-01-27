@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#__next {
+  @apply h-full;
+}
+
 @layer components {
   /* Links animation from: https://www.30secondsofcode.org/css/s/hover-underline-animation */
   .animated-link {

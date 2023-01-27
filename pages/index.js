@@ -8,12 +8,12 @@ import Social from "../components/social/Social";
 export default function Home() {
   return (
     <>
-      <div className="md:hidden">
+      <div className="md:hidden h-full">
         <div className="fixed z-10 top-5 right-5">
           <MobileMenu buttonClassName="text-white" />
         </div>
 
-        <div className="relative h-screen">
+        <div className="relative h-full">
           <Image
             priority
             src={profilePic}
