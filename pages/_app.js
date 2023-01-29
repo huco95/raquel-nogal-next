@@ -22,9 +22,10 @@ const App = ({ Component, pageProps }) => {
         <meta
           property="og:image"
           itemprop="image"
-          content="${process.env.WEBSITE_URL}/opengraph.webp"
+          content="${process.env.WEBSITE_URL}/opengraph.png"
         />
-        /{/* <!-- Twitter Meta Tags --> */}
+        <meta property="og:image:type" content="image/png" />
+        {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content={process.env.WEBSITE_URL} />
         <meta property="twitter:url" content={process.env.WEBSITE_URL} />
@@ -32,7 +33,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content={`${process.env.WEBSITE_URL}/opengraph.webp`}
+          content={`${process.env.WEBSITE_URL}/opengraph.png`}
         />
       </Head>
       <Component {...pageProps} />
