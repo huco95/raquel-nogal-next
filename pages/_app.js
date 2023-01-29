@@ -21,6 +21,7 @@ const App = ({ Component, pageProps }) => {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
+          itemprop="image"
           content="${process.env.WEBSITE_URL}/opengraph.webp"
         />
         /{/* <!-- Twitter Meta Tags --> */}
