@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }) => {
         <meta
           property="og:image"
           itemprop="image"
-          content="${process.env.WEBSITE_URL}/opengraph.png"
+          content={`${process.env.WEBSITE_URL}/opengraph.png`}
         />
         <meta property="og:image:type" content="image/png" />
         {/* <!-- Twitter Meta Tags --> */}
