@@ -3,53 +3,35 @@ import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 
 const App = ({ Component, pageProps }) => {
+  const title = "Raquel Nogal: marketing y comunicación";
+  const description = "Raquel Nogal: marketing y comunicación";
+
   return (
     <>
       <Head>
-        <title>Raquel Nogal: marketing y comunicación</title>
-        <meta
-          name="description"
-          content="Raquel Nogal: marketing y comunicación"
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         {/* <!-- HTML Meta Tags --> */}
-        <title>Raquel Nogal: marketing y comunicación</title>
-        <meta
-          name="description"
-          content="Raquel Nogal: marketing y comunicación"
-        />
+        <title>{description}</title>
+        <meta name="description" content={description} />
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://raquel-nogal.vercel.app" />
+        <meta property="og:url" content={process.env.WEBSITE_URL} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Raquel Nogal: marketing y comunicación"
-        />
-        <meta
-          property="og:description"
-          content="Raquel Nogal: marketing y comunicación"
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https://raquel-nogal.vercel.app/opengraph.png"
+          content="${process.env.WEBSITE_URL}/opengraph.png"
         />
         /{/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="raquel-nogal.vercel.app" />
-        <meta
-          property="twitter:url"
-          content="https://raquel-nogal.vercel.app"
-        />
-        <meta
-          name="twitter:title"
-          content="Raquel Nogal: marketing y comunicación"
-        />
-        <meta
-          name="twitter:description"
-          content="Raquel Nogal: marketing y comunicación"
-        />
+        <meta property="twitter:domain" content={process.env.WEBSITE_URL} />
+        <meta property="twitter:url" content={process.env.WEBSITE_URL} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://raquel-nogal.vercel.app/opengraph.png"
+          content={`${process.env.WEBSITE_URL}/opengraph.png`}
         />
       </Head>
       <Component {...pageProps} />
