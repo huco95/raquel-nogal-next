@@ -18,14 +18,8 @@ const setInitialTheme = `
 export default function Document() {
   return (
     <Html lang="es">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className="text-gray-900 bg-slate-50 dark:text-white dark:bg-gray-800 font-body transition-all duration-300">
+      <Head></Head>
+      <body className="text-gray-900 transition-all duration-300 bg-slate-50 dark:text-white dark:bg-gray-800 font-body">
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         <Main />
         <NextScript />

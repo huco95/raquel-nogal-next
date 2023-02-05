@@ -9,11 +9,22 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        {/* <!-- HTML Meta Tags --> */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>{description}</title>
         <meta name="description" content={description} />
+        <meta
+          name="keywords"
+          content="Raquel, Nogal, Raquel Nogal, marketing, comunicacion, redes sociales, periodismo"
+        />
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+        />
+        <link rel="icon" href="/favicon.ico" />
+
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content={process.env.WEBSITE_URL} />
         <meta property="og:type" content="website" />
