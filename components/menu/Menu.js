@@ -17,10 +17,10 @@ const links = [
     path: "/social-media",
     label: "Redes sociales",
   },
-  {
-    path: "/blog",
-    label: "Blog",
-  },
+  // {
+  //   path: "/blog",
+  //   label: "Blog",
+  // },
 ];
 
 export default function Menu({ className }) {
