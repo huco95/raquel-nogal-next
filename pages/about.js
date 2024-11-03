@@ -13,21 +13,25 @@ export default function About() {
       <Layout>
         <div>
           <p className="mb-2">
-            Graduada en el grado de Periodismo por la Universidad Complutense de
-            Madrid y cuento con un Máster en Marketing Digital de la misma
-            universidad. Actualmente compagino la beca Schuman de comunicación
-            en la DG de Comunicación del Parlamento Europeo con el estudio del
-            Máster en Unión Europea en el Instituto Europeo de Bilbao.
+            ¡Hola! Bienvenid@ a mi página web. Antes de que explores mis trabajos, déjame contarte un poco sobre mí:
           </p>
           <p className="mb-2">
-            Mi experiencia se centra en medios de comunicación y en agencias de
-            comunicación y marketing donde, gracias a mis conocimientos de
-            idiomas, he podido obtener experiencia internacional.
+            Soy Raquel Nogal, periodista con un profundo interés en las nuevas formas de comunicación, los asuntos internacionales y la política. Todo ello,
+            hizo especializarme en temas de la Unión Europea y a sumergirme en el mundo del marketing digital y las redes sociales, siempre con un enfoque
+            creativo en la comunicación digital.
+          </p>
+          <p className="mb-2">
+            Mi curiosidad y mis ganas de aprender me han llevado a vivir experiencias profesionales en distintos países y a explorar la comunicación desde
+            diversas perspectivas: agencias de comunicación y marketing, medios de comunicación, organizaciones internacionales y think tanks.
+          </p>
+          <p className="mb-2">
+            Disfruto explorando nuevas vías para comunicar de manera efectiva y atractiva. En los últimos años, me he enfocado en la comunicación digital,
+            descubriendo el potencial infinito que ofrece para conectar con audiencias de manera auténtica y significativa.
           </p>
           <p>
-            Soy una persona comprometida, observadora y curiosa, algo que me ha
-            ayudado a crecer en un mundo tan cambiante y creativo como es el de
-            la comunicación.
+            Creo firmemente en el poder de la comunicación para inspirar, informar y transformar. Para mí, comunicar va más allá de simplemente transmitir
+            información; es un arte que nos permite construir puentes entre personas, culturas y perspectivas. En un mundo cada vez más interconectado, la
+            comunicación se convierte en una herramienta vital para construir un futuro más inclusivo, informado y empoderado.
           </p>
         </div>
 
